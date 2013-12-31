@@ -1,0 +1,26 @@
+{
+    "name": "JiffyBox",
+    "apiVersion": "v1.0",
+    "baseUrl": "https://api.jiffybox.de/{token}/{version}",
+    "description": "JiffyBox WebService API",
+    "operations": {
+        "doc": {
+            "httpMethod": "GET",
+            "uri": "doc",
+            "summary": "Hiermit bekommen Sie eine Übersicht aller verfücgbaren Module mit einer Kurzbeschreibung, was diese machen."
+        },
+        "doc-module": {
+            "httpMethod": "GET",
+            "uri": "doc/{module}",
+            "summary": "Hiermit lesen Sie die Kurzdokumentation eines Moduls aus. Eine Liste aller Module gibt es unter /.",
+            "parameters": {
+                "module": {
+                    "location": "uri",
+                    "description": "Module to retrieve documentation for.",
+                    "required": true
+                }
+            }
+        }
+    },
+    "models": {}
+}
